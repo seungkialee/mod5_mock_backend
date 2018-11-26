@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  routing: MyString
+  type: 
+  balance: MyString
+  user: one
+
+two:
+  routing: MyString
+  type: 
+  balance: MyString
+  user: two

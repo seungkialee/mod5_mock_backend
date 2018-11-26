@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  receiving_route: MyString
+  sending_route: MyString
+  detail: MyString
+  amount: MyString
+  approve: false
+  account: one
+
+two:
+  receiving_route: MyString
+  sending_route: MyString
+  detail: MyString
+  amount: MyString
+  approve: false
+  account: two
