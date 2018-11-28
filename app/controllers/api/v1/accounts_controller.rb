@@ -6,8 +6,8 @@ class Api::V1::AccountsController < ApplicationController
  end
 
   def index
-    @account = Account.all
-    render json: @account
+    @accounts = Account.all
+    render json: @accounts
   end
 
   def show

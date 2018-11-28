@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users, only: %i[index show create]
       resources :accounts, only: %i[index create show]
+      resources :transactions, only: %i[index]
 
       post '/login', to: 'auth#create'
       get '/profile', to: 'users#profile'
