@@ -14,17 +14,16 @@ class ApplicationController < ActionController::API
   end
 
   # def current_user
-#   if decoded_token
-#     user_id = decoded_token[0]['user_id']
-#     @user = User.find_by(id: user_id)
-#   end
-# end
-#
-def logged_in?
-  !!current_user
+  #   if decoded_token
+  #     user_id = decoded_token[0]['user_id']
+  #     @user = User.find_by(id: user_id)
+  #   end
+  # end
+  #
+  def logged_in?
+    !!current_user
+  end
 end
-
- end
 # def decoded_token
 #   if auth_header
 #     token = auth_header.split(' ')[1]

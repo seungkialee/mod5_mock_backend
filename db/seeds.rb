@@ -12,3 +12,4 @@ Transaction.create([{ detail: 'Test Trans:2', amount: 100, approve: true, accoun
 Transaction.create([{ detail: 'Test Trans:3', amount: 50, approve: true, account_id: 1 }])
 Transaction.create([{ detail: 'Test Trans:4', amount: 10, approve: true, account_id: 2 }])
 Transaction.create([{ detail: 'Test Trans:5', amount: 1000, approve: true, account_id: 2 }])
+# Transaction.create([{detail: 'Transfer', amount: 100, approve: true, account_id:}])
