@@ -11,11 +11,19 @@ class Api::V1::AccountsController < ApplicationController
   end
 
   def show
-    @account = Account.where(user_id: params[:id])
+    @account = Account.where(id: params[:id])
+    render json: @account
+  end
+
+  def update
+    @account = Account.find(params[:id])
+    @balance = @account.balance
+    @newBalance = @balance + params[:balance]
+    @account.update_attributes(balance: @newBalance)
     render json: @account
   end
 
   def acc_params
-    params.require(:account).permit(:account_type, :balance, :user_id)
+    params.require(:account).permit(:account_type, :balance, :id)
    end
 end
