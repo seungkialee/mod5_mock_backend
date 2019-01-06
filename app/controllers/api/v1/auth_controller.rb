@@ -1,5 +1,5 @@
 class Api::V1::AuthController < ApplicationController
-  skip_before_action :authorized, only: [:create]
+  skip_before_action :authorized, only: %i[create show]
 
   def create
     @user = User.find_by(username: user_login_params[:username])
@@ -9,6 +9,14 @@ class Api::V1::AuthController < ApplicationController
     else
       render json: { message: 'Invalid username or password' }, status: :unauthorized
     end
+  end
+
+  def show
+    token = auth_header
+    decode = decoded_token(token)
+    user = User.find(decode[0]['user_id'])
+    # byebug
+    render json: user
   end
 
   private
